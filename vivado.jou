@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Dec 10 16:39:48 2024
+# Process ID         : 40556
+# Current directory  : C:/project_4
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent25688 C:\project_4\project_4.xpr
+# Log file           : C:/project_4/vivado.log
+# Journal file       : C:/project_4\vivado.jou
+# Running On         : MSI
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700H
+# CPU Frequency      : 2688 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 16870 MB
+# Swap memory        : 17199 MB
+# Total Virtual      : 34070 MB
+# Available Virtual  : 9235 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/project_4/project_4.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+open_bd_design {C:/project_4/project_4.srcs/sources_1/bd/arm_processor/arm_processor.bd}
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_run impl_1
+write_hw_platform -fixed -include_bit -force -file C:/project_4/Top_Level.xsa
